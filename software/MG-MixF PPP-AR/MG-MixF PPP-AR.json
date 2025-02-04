@@ -1,0 +1,12 @@
+[
+    {
+        "Helmert_VC": "0",
+        "LP_precision": "0.03;3.0;0.06;6.0;0.03;3.0;0.03;3.0;0.03;3.0",
+        "NL cutoff": "0.5;",
+        "Pk": "1e3;10;1e6;1e6;100",
+        "Qw": "1e4;3e-8;1e6;1e-16;0.1",
+        "Ratio value": "2.0",
+        "Stochastic_model": "0",
+        "WL weight": "1e6;"
+    }
+]

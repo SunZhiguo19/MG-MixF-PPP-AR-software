@@ -1,0 +1,1820 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>SetWidget</class>
+ <widget class="QWidget" name="SetWidget">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1376</width>
+    <height>623</height>
+   </rect>
+  </property>
+  <property name="font">
+   <font>
+    <family>Times New Roman</family>
+    <pointsize>10</pointsize>
+   </font>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <property name="windowIcon">
+   <iconset resource="resources.qrc">
+    <normaloff>:/resources/icon2.png</normaloff>:/resources/icon2.png</iconset>
+  </property>
+  <widget class="QGroupBox" name="groupBox_2">
+   <property name="geometry">
+    <rect>
+     <x>470</x>
+     <y>260</y>
+     <width>581</width>
+     <height>151</height>
+    </rect>
+   </property>
+   <property name="title">
+    <string>Results file storage</string>
+   </property>
+   <widget class="QCheckBox" name="Bad_satellites">
+    <property name="geometry">
+     <rect>
+      <x>120</x>
+      <y>30</y>
+      <width>101</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Bad_satellites</string>
+    </property>
+   </widget>
+   <widget class="QCheckBox" name="ZTDW_Clock">
+    <property name="geometry">
+     <rect>
+      <x>230</x>
+      <y>30</y>
+      <width>81</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>ZTDW_Clock</string>
+    </property>
+    <property name="checked">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QCheckBox" name="Satellite_info">
+    <property name="geometry">
+     <rect>
+      <x>330</x>
+      <y>30</y>
+      <width>101</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Satellite_info</string>
+    </property>
+   </widget>
+   <widget class="QCheckBox" name="Az_El_coff">
+    <property name="geometry">
+     <rect>
+      <x>30</x>
+      <y>70</y>
+      <width>111</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Az_El_coff</string>
+    </property>
+    <property name="checked">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QCheckBox" name="dop_satN_AR">
+    <property name="geometry">
+     <rect>
+      <x>450</x>
+      <y>30</y>
+      <width>121</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>dop_satN_AR</string>
+    </property>
+    <property name="checked">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QCheckBox" name="position">
+    <property name="geometry">
+     <rect>
+      <x>30</x>
+      <y>30</y>
+      <width>91</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>position</string>
+    </property>
+    <property name="checked">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QCheckBox" name="ambiguity_inf">
+    <property name="enabled">
+     <bool>true</bool>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>150</x>
+      <y>70</y>
+      <width>91</width>
+      <height>19</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>amb_inf</string>
+    </property>
+    <property name="checked">
+     <bool>true</bool>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QGroupBox" name="groupBox_3">
+   <property name="geometry">
+    <rect>
+     <x>1090</x>
+     <y>30</y>
+     <width>251</width>
+     <height>211</height>
+    </rect>
+   </property>
+   <property name="title">
+    <string>ambiguity resolution</string>
+   </property>
+   <widget class="QComboBox" name="positioning_method">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>50</y>
+      <width>191</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <item>
+     <property name="text">
+      <string>Float solution</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Integer clock products</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>OSBs products</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>UPD/FCBs products</string>
+     </property>
+    </item>
+   </widget>
+   <widget class="QComboBox" name="PAR_subset">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>110</y>
+      <width>221</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="frame">
+     <bool>true</bool>
+    </property>
+    <item>
+     <property name="text">
+      <string>success rate criterion</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>elevation angle strategy</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>ADOP strategy</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>posterior residual sequence</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>full ambiguity fixed</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Diagonal var</string>
+     </property>
+    </item>
+   </widget>
+   <widget class="QLabel" name="label_8">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>20</y>
+      <width>221</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>product corresponding model</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_9">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>90</y>
+      <width>231</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>partial ambiguity resolution</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_3">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>150</y>
+      <width>211</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Reference satellite selection</string>
+    </property>
+   </widget>
+   <widget class="QComboBox" name="Ref_satelite">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>170</y>
+      <width>221</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <item>
+     <property name="text">
+      <string>Max elevation satellite</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Minimum variance satellite</string>
+     </property>
+    </item>
+   </widget>
+  </widget>
+  <widget class="QGroupBox" name="groupBox_7">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>260</y>
+     <width>311</width>
+     <height>151</height>
+    </rect>
+   </property>
+   <property name="title">
+    <string>delete setllites, for example G04;et</string>
+   </property>
+   <widget class="QCheckBox" name="BDS2">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>20</y>
+      <width>91</width>
+      <height>19</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>BDS-2</string>
+    </property>
+   </widget>
+   <widget class="QCheckBox" name="BDS3">
+    <property name="geometry">
+     <rect>
+      <x>170</x>
+      <y>20</y>
+      <width>91</width>
+      <height>19</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>BDS-3</string>
+    </property>
+   </widget>
+   <widget class="QCheckBox" name="BDS2GEO">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>40</y>
+      <width>101</width>
+      <height>19</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>BDS-2 GEO</string>
+    </property>
+    <property name="checked">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QCheckBox" name="BDS3GEO">
+    <property name="geometry">
+     <rect>
+      <x>170</x>
+      <y>40</y>
+      <width>101</width>
+      <height>19</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>BDS-3 GEO</string>
+    </property>
+    <property name="checked">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="delete_satellite">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>70</y>
+      <width>291</width>
+      <height>71</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QGroupBox" name="groupBox">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>30</y>
+     <width>241</width>
+     <height>211</height>
+    </rect>
+   </property>
+   <property name="title">
+    <string>PPP model</string>
+   </property>
+   <widget class="QComboBox" name="Combination_mode">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>40</y>
+      <width>71</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <item>
+     <property name="text">
+      <string>UDUC</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>IF</string>
+     </property>
+    </item>
+   </widget>
+   <widget class="QComboBox" name="fre_mode">
+    <property name="geometry">
+     <rect>
+      <x>96</x>
+      <y>40</y>
+      <width>111</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <item>
+     <property name="text">
+      <string>double-fre</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>triple-fre</string>
+     </property>
+    </item>
+   </widget>
+   <widget class="QLabel" name="label_2">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>20</y>
+      <width>141</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>combination mode</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_13">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>80</y>
+      <width>141</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>filtering mode</string>
+    </property>
+   </widget>
+   <widget class="QComboBox" name="motion_state">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>100</y>
+      <width>91</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <item>
+     <property name="text">
+      <string>dynamic</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>static</string>
+     </property>
+    </item>
+   </widget>
+   <widget class="QComboBox" name="filter">
+    <property name="geometry">
+     <rect>
+      <x>130</x>
+      <y>100</y>
+      <width>71</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <item>
+     <property name="text">
+      <string>kalman</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>slsq</string>
+     </property>
+    </item>
+   </widget>
+   <widget class="QLabel" name="label_24">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>140</y>
+      <width>141</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>ephemeris state</string>
+    </property>
+   </widget>
+   <widget class="QComboBox" name="data_process_state">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>170</y>
+      <width>181</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <item>
+     <property name="text">
+      <string>post precise</string>
+     </property>
+    </item>
+   </widget>
+  </widget>
+  <widget class="QGroupBox" name="groupBox_4">
+   <property name="geometry">
+    <rect>
+     <x>270</x>
+     <y>30</y>
+     <width>120</width>
+     <height>211</height>
+    </rect>
+   </property>
+   <property name="title">
+    <string>select system</string>
+   </property>
+   <widget class="QCheckBox" name="select_GLONASS">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>180</y>
+      <width>91</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>GLONASS</string>
+    </property>
+   </widget>
+   <widget class="QCheckBox" name="select_Galileo">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>130</y>
+      <width>91</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Galileo</string>
+    </property>
+   </widget>
+   <widget class="QCheckBox" name="select_GPS">
+    <property name="enabled">
+     <bool>true</bool>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>80</y>
+      <width>91</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="acceptDrops">
+     <bool>false</bool>
+    </property>
+    <property name="text">
+     <string>GPS</string>
+    </property>
+    <property name="checked">
+     <bool>false</bool>
+    </property>
+   </widget>
+   <widget class="QCheckBox" name="select_BDS">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>30</y>
+      <width>81</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>BDS</string>
+    </property>
+    <property name="checked">
+     <bool>true</bool>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QGroupBox" name="groupBox_9">
+   <property name="geometry">
+    <rect>
+     <x>410</x>
+     <y>30</y>
+     <width>381</width>
+     <height>211</height>
+    </rect>
+   </property>
+   <property name="title">
+    <string>select frequence</string>
+   </property>
+   <widget class="QStackedWidget" name="select_frequence">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>20</y>
+      <width>341</width>
+      <height>181</height>
+     </rect>
+    </property>
+    <property name="currentIndex">
+     <number>0</number>
+    </property>
+    <widget class="QWidget" name="page">
+     <widget class="QComboBox" name="comboBox_C_f1">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>10</y>
+        <width>51</width>
+        <height>22</height>
+       </rect>
+      </property>
+      <item>
+       <property name="text">
+        <string>B1C</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>B1I</string>
+       </property>
+      </item>
+     </widget>
+     <widget class="QComboBox" name="comboBox_C_f2">
+      <property name="geometry">
+       <rect>
+        <x>80</x>
+        <y>10</y>
+        <width>51</width>
+        <height>22</height>
+       </rect>
+      </property>
+      <item>
+       <property name="text">
+        <string>B3I</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>B1I</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>B2a</string>
+       </property>
+      </item>
+     </widget>
+     <widget class="QComboBox" name="comboBox_C_f3">
+      <property name="geometry">
+       <rect>
+        <x>150</x>
+        <y>10</y>
+        <width>51</width>
+        <height>22</height>
+       </rect>
+      </property>
+      <item>
+       <property name="text">
+        <string>OFF</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>B3I</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>B2b/B2I</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>B2a</string>
+       </property>
+      </item>
+     </widget>
+     <widget class="QComboBox" name="comboBox_C_f4">
+      <property name="geometry">
+       <rect>
+        <x>220</x>
+        <y>10</y>
+        <width>51</width>
+        <height>22</height>
+       </rect>
+      </property>
+      <item>
+       <property name="text">
+        <string>OFF</string>
+       </property>
+      </item>
+     </widget>
+     <widget class="QComboBox" name="comboBox_C_f5">
+      <property name="geometry">
+       <rect>
+        <x>290</x>
+        <y>10</y>
+        <width>51</width>
+        <height>22</height>
+       </rect>
+      </property>
+      <item>
+       <property name="text">
+        <string>OFF</string>
+       </property>
+      </item>
+     </widget>
+     <widget class="QComboBox" name="comboBox_G_f1">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>60</y>
+        <width>51</width>
+        <height>22</height>
+       </rect>
+      </property>
+      <item>
+       <property name="text">
+        <string>L1</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>L2</string>
+       </property>
+      </item>
+     </widget>
+     <widget class="QComboBox" name="comboBox_G_f2">
+      <property name="geometry">
+       <rect>
+        <x>80</x>
+        <y>60</y>
+        <width>51</width>
+        <height>22</height>
+       </rect>
+      </property>
+      <item>
+       <property name="text">
+        <string>L2</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>L5</string>
+       </property>
+      </item>
+     </widget>
+     <widget class="QComboBox" name="comboBox_G_f3">
+      <property name="geometry">
+       <rect>
+        <x>150</x>
+        <y>60</y>
+        <width>51</width>
+        <height>22</height>
+       </rect>
+      </property>
+      <item>
+       <property name="text">
+        <string>OFF</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>L5</string>
+       </property>
+      </item>
+     </widget>
+     <widget class="QComboBox" name="comboBox_E_f5">
+      <property name="geometry">
+       <rect>
+        <x>290</x>
+        <y>110</y>
+        <width>51</width>
+        <height>22</height>
+       </rect>
+      </property>
+      <item>
+       <property name="text">
+        <string>OFF</string>
+       </property>
+      </item>
+     </widget>
+     <widget class="QComboBox" name="comboBox_E_f1">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>110</y>
+        <width>51</width>
+        <height>22</height>
+       </rect>
+      </property>
+      <item>
+       <property name="text">
+        <string>E1</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>E5 boc</string>
+       </property>
+      </item>
+     </widget>
+     <widget class="QComboBox" name="comboBox_E_f2">
+      <property name="geometry">
+       <rect>
+        <x>80</x>
+        <y>110</y>
+        <width>51</width>
+        <height>22</height>
+       </rect>
+      </property>
+      <item>
+       <property name="text">
+        <string>E5a</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>E5 boc</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>E6</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>E5b</string>
+       </property>
+      </item>
+     </widget>
+     <widget class="QComboBox" name="comboBox_E_f4">
+      <property name="geometry">
+       <rect>
+        <x>220</x>
+        <y>110</y>
+        <width>51</width>
+        <height>22</height>
+       </rect>
+      </property>
+      <item>
+       <property name="text">
+        <string>OFF</string>
+       </property>
+      </item>
+     </widget>
+     <widget class="QComboBox" name="comboBox_E_f3">
+      <property name="geometry">
+       <rect>
+        <x>150</x>
+        <y>110</y>
+        <width>51</width>
+        <height>22</height>
+       </rect>
+      </property>
+      <item>
+       <property name="text">
+        <string>OFF</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>E5 boc</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>E5b</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>E5a</string>
+       </property>
+      </item>
+     </widget>
+     <widget class="QComboBox" name="comboBox_R_f3">
+      <property name="geometry">
+       <rect>
+        <x>150</x>
+        <y>155</y>
+        <width>51</width>
+        <height>22</height>
+       </rect>
+      </property>
+      <item>
+       <property name="text">
+        <string>OFF</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>L5</string>
+       </property>
+      </item>
+     </widget>
+     <widget class="QComboBox" name="comboBox_R_f2">
+      <property name="geometry">
+       <rect>
+        <x>80</x>
+        <y>155</y>
+        <width>51</width>
+        <height>22</height>
+       </rect>
+      </property>
+      <item>
+       <property name="text">
+        <string>L2</string>
+       </property>
+      </item>
+     </widget>
+     <widget class="QComboBox" name="comboBox_R_f1">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>155</y>
+        <width>51</width>
+        <height>22</height>
+       </rect>
+      </property>
+      <item>
+       <property name="text">
+        <string>L1</string>
+       </property>
+      </item>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="page_2">
+     <widget class="QComboBox" name="BDSIF_1fre">
+      <property name="geometry">
+       <rect>
+        <x>60</x>
+        <y>10</y>
+        <width>87</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <item>
+       <property name="text">
+        <string>B1I</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>B2I</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>B3I</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>B1C</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>B2a</string>
+       </property>
+      </item>
+     </widget>
+     <widget class="QComboBox" name="BDSIF_2fre">
+      <property name="geometry">
+       <rect>
+        <x>230</x>
+        <y>10</y>
+        <width>87</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <item>
+       <property name="text">
+        <string>B3I</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>B1I</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>B2I</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>B1C</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>B2a</string>
+       </property>
+      </item>
+     </widget>
+     <widget class="QComboBox" name="GPSIF_2fre">
+      <property name="geometry">
+       <rect>
+        <x>230</x>
+        <y>60</y>
+        <width>87</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <item>
+       <property name="text">
+        <string>L2</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>L1</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>L5</string>
+       </property>
+      </item>
+     </widget>
+     <widget class="QComboBox" name="GPSIF_1fre">
+      <property name="geometry">
+       <rect>
+        <x>60</x>
+        <y>60</y>
+        <width>87</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <item>
+       <property name="text">
+        <string>L1</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>L2</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>L5</string>
+       </property>
+      </item>
+     </widget>
+     <widget class="QComboBox" name="GLEIF_2fre">
+      <property name="geometry">
+       <rect>
+        <x>230</x>
+        <y>100</y>
+        <width>87</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <item>
+       <property name="text">
+        <string>E5a</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>E1</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>E5b</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>E5boc</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>E6</string>
+       </property>
+      </item>
+     </widget>
+     <widget class="QComboBox" name="GLEIF_1fre">
+      <property name="geometry">
+       <rect>
+        <x>60</x>
+        <y>100</y>
+        <width>87</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <item>
+       <property name="text">
+        <string>E1</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>E5a</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>E5b</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>E5 boc</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>E6</string>
+       </property>
+      </item>
+     </widget>
+     <widget class="QComboBox" name="GLOIF_2fre">
+      <property name="geometry">
+       <rect>
+        <x>230</x>
+        <y>150</y>
+        <width>87</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <item>
+       <property name="text">
+        <string>L2</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>L1</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>L3</string>
+       </property>
+      </item>
+     </widget>
+     <widget class="QComboBox" name="GLOIF_1fre">
+      <property name="geometry">
+       <rect>
+        <x>60</x>
+        <y>150</y>
+        <width>87</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <item>
+       <property name="text">
+        <string>L1</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>L2</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>L3</string>
+       </property>
+      </item>
+     </widget>
+     <widget class="QLabel" name="label">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>10</y>
+        <width>51</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>first</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_17">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>60</y>
+        <width>51</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>first</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_18">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>100</y>
+        <width>51</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>first</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_19">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>150</y>
+        <width>51</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>first</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_20">
+      <property name="geometry">
+       <rect>
+        <x>160</x>
+        <y>150</y>
+        <width>51</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>second</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_21">
+      <property name="geometry">
+       <rect>
+        <x>160</x>
+        <y>100</y>
+        <width>51</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>second</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_22">
+      <property name="geometry">
+       <rect>
+        <x>160</x>
+        <y>10</y>
+        <width>51</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>second</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_23">
+      <property name="geometry">
+       <rect>
+        <x>160</x>
+        <y>60</y>
+        <width>51</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>second</string>
+      </property>
+     </widget>
+    </widget>
+   </widget>
+  </widget>
+  <widget class="QGroupBox" name="groupBox_10">
+   <property name="geometry">
+    <rect>
+     <x>800</x>
+     <y>30</y>
+     <width>251</width>
+     <height>211</height>
+    </rect>
+   </property>
+   <property name="title">
+    <string>quality control</string>
+   </property>
+   <widget class="QLabel" name="label_6">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>30</y>
+      <width>41</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>ELE</string>
+    </property>
+   </widget>
+   <widget class="QSpinBox" name="ELEspinBox">
+    <property name="geometry">
+     <rect>
+      <x>190</x>
+      <y>30</y>
+      <width>46</width>
+      <height>22</height>
+     </rect>
+    </property>
+    <property name="maximum">
+     <number>90</number>
+    </property>
+    <property name="value">
+     <number>10</number>
+    </property>
+   </widget>
+   <widget class="QSlider" name="angle_of_altitude">
+    <property name="geometry">
+     <rect>
+      <x>80</x>
+      <y>30</y>
+      <width>101</width>
+      <height>22</height>
+     </rect>
+    </property>
+    <property name="maximum">
+     <number>90</number>
+    </property>
+    <property name="pageStep">
+     <number>30</number>
+    </property>
+    <property name="value">
+     <number>10</number>
+    </property>
+    <property name="sliderPosition">
+     <number>10</number>
+    </property>
+    <property name="orientation">
+     <enum>Qt::Horizontal</enum>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_5">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>70</y>
+      <width>31</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>SNR</string>
+    </property>
+   </widget>
+   <widget class="QSpinBox" name="SNRspinBox_2">
+    <property name="geometry">
+     <rect>
+      <x>190</x>
+      <y>70</y>
+      <width>46</width>
+      <height>22</height>
+     </rect>
+    </property>
+    <property name="maximum">
+     <number>90</number>
+    </property>
+    <property name="value">
+     <number>30</number>
+    </property>
+   </widget>
+   <widget class="QSlider" name="SNR_of_min">
+    <property name="geometry">
+     <rect>
+      <x>80</x>
+      <y>70</y>
+      <width>101</width>
+      <height>22</height>
+     </rect>
+    </property>
+    <property name="maximum">
+     <number>90</number>
+    </property>
+    <property name="pageStep">
+     <number>30</number>
+    </property>
+    <property name="value">
+     <number>30</number>
+    </property>
+    <property name="sliderPosition">
+     <number>30</number>
+    </property>
+    <property name="orientation">
+     <enum>Qt::Horizontal</enum>
+    </property>
+   </widget>
+   <widget class="QCheckBox" name="cycle_slip_detection">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>100</y>
+      <width>201</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>cycle slip detection</string>
+    </property>
+    <property name="checked">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QComboBox" name="robust_estimation">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>170</y>
+      <width>191</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <item>
+     <property name="text">
+      <string>3_cigma_criteria</string>
+     </property>
+    </item>
+   </widget>
+   <widget class="QCheckBox" name="Robust_filter">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>140</y>
+      <width>131</width>
+      <height>19</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Robust filtering</string>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QGroupBox" name="groupBox_5">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>480</y>
+     <width>1031</width>
+     <height>121</height>
+    </rect>
+   </property>
+   <property name="title">
+    <string>Data path and data processing</string>
+   </property>
+   <widget class="QPushButton" name="select_path">
+    <property name="geometry">
+     <rect>
+      <x>740</x>
+      <y>30</y>
+      <width>271</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Select the input data folder path</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="observation_file_path">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>30</y>
+      <width>711</width>
+      <height>31</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="result_file_path">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>80</y>
+      <width>711</width>
+      <height>31</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="select_save_file_path">
+    <property name="geometry">
+     <rect>
+      <x>740</x>
+      <y>80</y>
+      <width>271</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Select the path to save the result file</string>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QGroupBox" name="groupBox_6">
+   <property name="geometry">
+    <rect>
+     <x>340</x>
+     <y>260</y>
+     <width>121</width>
+     <height>151</height>
+    </rect>
+   </property>
+   <property name="title">
+    <string>system error</string>
+   </property>
+   <widget class="QComboBox" name="sys_error_select">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>30</y>
+      <width>87</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <item>
+     <property name="text">
+      <string>ISBs</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Only EST</string>
+     </property>
+    </item>
+   </widget>
+   <widget class="QCheckBox" name="GNSS_AR_select">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>70</y>
+      <width>101</width>
+      <height>19</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>unused</string>
+    </property>
+   </widget>
+   <widget class="QCheckBox" name="SRC_Ps">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>110</y>
+      <width>81</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>SRC Ps</string>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QPushButton" name="run_engineering_2">
+   <property name="geometry">
+    <rect>
+     <x>1110</x>
+     <y>510</y>
+     <width>221</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Close the window</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="save_config">
+   <property name="geometry">
+    <rect>
+     <x>1110</x>
+     <y>560</y>
+     <width>221</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Savesave configuration</string>
+   </property>
+  </widget>
+  <widget class="QGroupBox" name="groupBox_8">
+   <property name="geometry">
+    <rect>
+     <x>1090</x>
+     <y>260</y>
+     <width>251</width>
+     <height>151</height>
+    </rect>
+   </property>
+   <property name="title">
+    <string>Initialization time</string>
+   </property>
+   <widget class="QCheckBox" name="Reinitalization_timebox">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>30</y>
+      <width>111</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Reinit_time</string>
+    </property>
+   </widget>
+   <widget class="QComboBox" name="Reinitalization_time">
+    <property name="geometry">
+     <rect>
+      <x>120</x>
+      <y>30</y>
+      <width>111</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <item>
+     <property name="text">
+      <string>1hour</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>2hour</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>3hour</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>4hour</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>5hour</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>6hour</string>
+     </property>
+    </item>
+   </widget>
+   <widget class="QCheckBox" name="mult_station">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>70</y>
+      <width>221</width>
+      <height>19</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Multi-station data processing</string>
+    </property>
+    <property name="checked">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QCheckBox" name="mult_day">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>100</y>
+      <width>211</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Multi-day data processing</string>
+    </property>
+    <property name="checked">
+     <bool>true</bool>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QGroupBox" name="groupBox_11">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>420</y>
+     <width>461</width>
+     <height>61</height>
+    </rect>
+   </property>
+   <property name="title">
+    <string>pattern configuration</string>
+   </property>
+   <widget class="QCheckBox" name="WL_constraint">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>30</y>
+      <width>181</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>unused</string>
+    </property>
+   </widget>
+   <widget class="QComboBox" name="Ambiguity_acquisition">
+    <property name="geometry">
+     <rect>
+      <x>220</x>
+      <y>20</y>
+      <width>211</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <item>
+     <property name="text">
+      <string>poor ambiguity</string>
+     </property>
+    </item>
+   </widget>
+  </widget>
+  <widget class="QGroupBox" name="groupBox_12">
+   <property name="geometry">
+    <rect>
+     <x>510</x>
+     <y>420</y>
+     <width>541</width>
+     <height>61</height>
+    </rect>
+   </property>
+   <property name="title">
+    <string>forward and backward filtering</string>
+   </property>
+   <widget class="QComboBox" name="filter_dir">
+    <property name="geometry">
+     <rect>
+      <x>30</x>
+      <y>20</y>
+      <width>321</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <item>
+     <property name="text">
+      <string>forward filter</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>forward and backward filter</string>
+     </property>
+    </item>
+   </widget>
+   <widget class="QComboBox" name="frequency_model">
+    <property name="geometry">
+     <rect>
+      <x>370</x>
+      <y>20</y>
+      <width>161</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <item>
+     <property name="text">
+      <string>fixed-fre</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>mixed-fre</string>
+     </property>
+    </item>
+   </widget>
+  </widget>
+  <zorder>groupBox_3</zorder>
+  <zorder>groupBox_2</zorder>
+  <zorder>groupBox_7</zorder>
+  <zorder>groupBox</zorder>
+  <zorder>groupBox_4</zorder>
+  <zorder>groupBox_9</zorder>
+  <zorder>groupBox_10</zorder>
+  <zorder>groupBox_5</zorder>
+  <zorder>groupBox_6</zorder>
+  <zorder>run_engineering_2</zorder>
+  <zorder>save_config</zorder>
+  <zorder>groupBox_8</zorder>
+  <zorder>groupBox_11</zorder>
+  <zorder>groupBox_12</zorder>
+ </widget>
+ <resources>
+  <include location="resources.qrc"/>
+ </resources>
+ <connections/>
+</ui>
